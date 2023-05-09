@@ -324,6 +324,7 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  position:relative;
 }
 
 .explore-content h1 {
@@ -411,6 +412,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position:absolute
 }
 
 .swiper {
