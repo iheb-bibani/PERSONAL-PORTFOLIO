@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Adventure</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
   </head>
   <body>
     <!-- NAVBAR -->
@@ -80,21 +81,93 @@
     </section>
 
     <section class="explore">
-      <div class="explore-content-1">
+      <div class="explore-content">
       <h1>My Services</h1>
       <div class='line'></div>
-    <a href="#" class="ctn"> Learn More </a>
   </div>
+      <span class="Sphere"></span>
+      <script src="https://cdn.jsdelivr.net/npm/TagCloud@2.2/dist/TagCloud.min.js"></script>
+      <script>
+        const Texts = ["Artificial Intelligence","Data Analysis","Machine Learning","Deep Learning",
+      "Predictions","Dashboards","Trading Bots","Chatbots","APIs"];
+
+      var tagCloud = TagCloud('.Sphere',Texts,{
+        radius:230,
+        maxSpeed:'normal',
+        initSpeed:'fast',
+        direction:135,
+        keep:true
+      });
+      var color = '#FF5733';
+      document.querySelector('.Sphere').style.color = color;
+      </script>
+   
     </section>
 
-    <section class="explore">
-        <div class="explore-content-2">
-      <h1>My Portfolio</h1>
-      <div class='line'></div>
-      <a href="#" class="ctn">Learn More</a>
-      </div>
+    <!-- <section class="explore"> -->
+        <!-- <div class="explore-content-2"> -->
+      <!-- <h1>My Portfolio</h1> -->
+      <!-- <div class='line'></div> -->
+      <!-- <a href="#" class="ctn">Learn More</a> -->   
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div> -->
+
+  <section class="explore">
+    <div class="explore-content">
+    <h1>My Portfolio</h1>
+    <div class='line'></div>
+</div>
+    <!-- Portfolio Gallery Grid -->
+<!-- <div class="row">
+  <div class="column">
+    <div class="content">
+      <img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/about.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
     </div>
   </div>
+  <div class="column">
+    <div class="content">
+    <img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/about.jpg" alt="Lights" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/about.jpg" alt="Nature" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    <img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/about.jpg" alt="Mountains" style="width:100%">
+      <h3>My Work</h3>
+      <p>Lorem ipsum dolor sit amet, tempor prodesset eos no. Temporibus necessitatibus sea ei, at tantas oporteat nam. Lorem ipsum dolor sit amet, tempor prodesset eos no.</p>
+    </div>
+  </div> -->
+<!-- END GRID -->
+<div class="container-1">
+  <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/img3.jpg" alt="Lights" style="width:100%"></div>
+    <div class="swiper-slide"><img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/img3.jpg" alt="Lights" style="width:100%"></div>
+    <div class="swiper-slide"><img src="/PERSONAL-PORTFOLIO/PORTFOLIO/portfolio_2/img/img3.jpg" alt="Lights" style="width:100%"></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+</div>
     </section>
     
     <section class="footer">
@@ -102,6 +175,7 @@
         <p> Copyright © 2023 </p>
     </section>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script>
       const menuBtn = document.querySelector(".menu-btn");
       const navlinks = document.querySelector(".nav-links");
@@ -109,6 +183,31 @@
         navlinks.classList.toggle("mobile-menu");
       });
     </script>
+    <script>
+      const swiper = new Swiper('.swiper', {
+    autoplay: {
+      delay:3000,
+      disableOnInteraction:false,
+    },
+  loop: true,
 
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable:true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
+    </script>
   </body>
 </html>
